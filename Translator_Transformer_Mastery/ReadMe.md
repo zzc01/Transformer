@@ -1,4 +1,4 @@
-# A Transformer Machine Translator with Custumized Attention
+# A Machine Translator with Encoder-Decoder Transformers 
 
 Here is an implmentation of the machine translator using the encoder-decoder architecture with transformers. The transfomer model is built in Tensorflow [1] and references from code from Machine Learning Mastery [2]. The translator is trained to translate German sentences to English sentences. <br/>
 
@@ -13,7 +13,20 @@ Here is an implmentation of the machine translator using the encoder-decoder arc
 <img src="https://github.com/zzc01/Transformer/assets/86133411/b05f651e-2c70-4d2c-a164-be27b1f89e3b"  width="300" >
 </p></pre>
 
-6. Training the model 
+4. The scaled dot-product attention and multi-head attention [2][3].
+
+<pre><p align="center">
+<img src="https://github.com/zzc01/Transformer/assets/86133411/2662ac99-ee81-418f-af30-3d0eaf6e560e"  width="450" >
+</p></pre>
+
+A more detailed graphical explination of multi-head attentions can be found below [4]. 
+
+<pre><p align="center">
+<img src="https://github.com/zzc01/Transformer/assets/86133411/17035d2b-dfd1-4b24-aa8e-24736183a9e5"  width="450" >
+</p></pre>
+
+
+5. Training the model 
 
 The training of the model is implemented in [Training.ipynb](/Translator_Transformer_Mastery/Training.ipynb). Here we use an adam optimizer with custom learning rate scheduler. The masked loss is calculated using SparseCategoricalCrossentropy and padding mask. Below is the training loss and validation loss v.s. epochs from [Plot_Training_Results.ipynb](/Translator_Transformer_Mastery/Plot_Training_Results.ipynb). 
 
@@ -22,7 +35,7 @@ The training of the model is implemented in [Training.ipynb](/Translator_Transfo
 </p></pre>
 
 
-7. Inference
+6. Inference
 
 Below shows the translation result of a German sentence "Fass nichts an, ohne zu fragen!" to English sentence. </br>
 
@@ -30,7 +43,7 @@ Below shows the translation result of a German sentence "Fass nichts an, ohne zu
 **Prediction     : don ' t touch anything without asking .</br>**
 **Ground truth   : Don't touch anything without asking.</br>**
 
-8. The model is evluated using BLEU score in [Evaluate.ipynb](/Translator_Transformer_Mastery/Evaluate.ipynb). Below shows the BLEU score result. 
+7. The model is evluated using BLEU score in [Evaluate.ipynb](/Translator_Transformer_Mastery/Evaluate.ipynb). Below shows the BLEU score result. 
 
 <pre><p align="center">
 <img src="https://github.com/zzc01/Transformer/assets/86133411/4d29b61e-4753-498c-939b-694859b67b5c"  width="400" >
@@ -42,4 +55,6 @@ Below shows the translation result of a German sentence "Fass nichts an, ohne zu
 [1] [Tensorflow](https://www.tensorflow.org/) <br/>
 [2] [Machine Learning Mastery](https://machinelearningmastery.com/) <br/> 
 [3] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)<br/>
+[4] [Transformers-explained-visually](https://towardsdatascience.com/transformers-explained-visually-not-just-how-but-why-they-work-so-well-d840bd61a9d3)<br/>
+
 
