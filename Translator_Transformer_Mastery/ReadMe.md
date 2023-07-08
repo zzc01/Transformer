@@ -15,7 +15,12 @@ Here is an implmentation of the machine translator using the encoder-decoder arc
 
 6. Training the model 
 
-The training of the model is implemented in [Training.ipynb](/Translator_Transformer_Mastery/Training.ipynb). Here we use an adam optimizer with custom learning rate scheduler. The masked loss is calculated using SparseCategoricalCrossentropy and padding mask.  
+The training of the model is implemented in [Training.ipynb](/Translator_Transformer_Mastery/Training.ipynb). Here we use an adam optimizer with custom learning rate scheduler. The masked loss is calculated using SparseCategoricalCrossentropy and padding mask. Below is the training loss and validation loss v.s. epochs. 
+
+<pre><p align="center">
+<img src="https://github.com/zzc01/Transformer/assets/86133411/8e29e42f-f92c-4e80-b1ca-463fb80d7cf4"  width="400" >
+</p></pre>
+
 
 7. Inference
 
