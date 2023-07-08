@@ -7,9 +7,9 @@ Here is an implmentation of the machine translator using the encoder-decoder arc
 
 The data is cleaned and split into train, validation, and testing sets. The script used to clean the data is in [data_cleaning.ipynb](/Translator_Transformer/data_cleaning.ipynb). Here we removed unused column from the original data, applied canonical decomposition normalization to each sentence word, and encoded the sentence to Bytes datastructure using utf-8. 
 
-2. Tokenizing words with sub-word WordPiece tokenization.
+2. Sub-word WordPiece tokenizer
 
-Traditional Word-based tokenizer suffers from very large vocabularies, out-of-vocailary tokens, and loss of meaning across similar words. Sub-word tokenizers solves this by decompoing rare words into smaller meaningful subwords. In [tokenizer_tf_deu_eng.ipynb](/Translator_Transformer/tokenizer_tf_deu_eng.ipynb) we first create a vocabulary list using bert_vocab.bert_vocab_from_dataset(). Next we build the tokenizer with tensorflow_text.BertTokenizer(). One tokenizer is built for german word and another tokenizer for english word. Finaly the tokenizers are saved for later use. 
+Traditional Word-based tokenizer suffers from very large vocabularies, out-of-vocailary tokens, and loss of meaning across similar words. Sub-word tokenizers solves this by decomposing rare words into smaller meaningful subwords. In [tokenizer_tf_deu_eng.ipynb](/Translator_Transformer/tokenizer_tf_deu_eng.ipynb) we first create a vocabulary list using bert_vocab.bert_vocab_from_dataset(). Next we build the tokenizer with tensorflow_text.BertTokenizer(). One tokenizer is built for german words and second tokenizer for english words. Finaly the tokenizers are saved for later use. 
 
 3. Here we use the Encoder-Decoder Model with Transformer neural network for the German to English translation task. 
 
