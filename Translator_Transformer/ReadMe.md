@@ -27,9 +27,9 @@ The transfomer model and the training of the model are both implemented in [trai
 
 Below shows the translation result and attention plot of a German sentence "Fass nichts an, ohne zu fragen!" to English sentence. </br>
 
-Input:         : Fass nichts an, ohne zu fragen!</br>
-Prediction     : don ' t touch anything without asking .</br>
-Ground truth   : Don't touch anything without asking.</br>
+**Input:         : Fass nichts an, ohne zu fragen!</br>**
+**Prediction     : don ' t touch anything without asking .</br>**
+**Ground truth   : Don't touch anything without asking.</br>**
 
 <pre><p align="center">
 <img src="https://github.com/zzc01/Transformer/assets/86133411/dad5085a-9165-40a4-a815-bd62f89be952"  width="400" >
