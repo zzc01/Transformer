@@ -23,15 +23,28 @@ The transformer model contain different building parts, including the mulit-head
 
 The transfomer model and the training of the model are both implemented in [train_tf.ipynb](/Translator_Transformer/train_tf.ipynb). Here we use an adam optimizer with custom learning rate scheduler. The masked loss is calculated using SparseCategoricalCrossentropy and padding mask.  
 
-7. The model is evluated using BLEU score in [evaluate.ipynb](/Translator_Transformer/evaluate.ipynb). Below shows the BLEU score result. 
+7. Inference
+
+Below shows the translation result and attention plot of a German sentence "Fass nichts an, ohne zu fragen!" to English sentence. </br>
+
+Input:         : Fass nichts an, ohne zu fragen!</br>
+Prediction     : don ' t touch anything without asking .</br>
+Ground truth   : Don't touch anything without asking.</br>
+
+<pre><p align="center">
+<img src="https://github.com/zzc01/Transformer/assets/86133411/dad5085a-9165-40a4-a815-bd62f89be952"  width="400" >
+</p></pre>
+
+
+8. The model is evluated using BLEU score in [evaluate.ipynb](/Translator_Transformer/evaluate.ipynb). Below shows the BLEU score result. 
 
 The left BLEU scores are the result of scoring the prediction against the raw target sentence. The right BLEU scores are scoring the prediction against the tokenized and then detokenized raw target sentence. The reason to do the tokenized and detokenized step is to seperate the puntuations and the words. For example to convert "don't" to "don ' t", and "the end." to "the end ."
 
 <pre><p align="center">
-<img src="https://github.com/zzc01/Transformer/assets/86133411/f1d7e1c5-d9a5-40ea-9b5e-6c8006b6e9c5"  width="400" >
+<img src="https://github.com/zzc01/Transformer/assets/86133411/4d29b61e-4753-498c-939b-694859b67b5c"  width="400" >
 </p></pre>
 
-8. The code is referenced from Tensorflow Tutorials [2] and Minchine Learning Mastery [3]
+9. The code is referenced from Tensorflow Tutorials [2] and Minchine Learning Mastery [3]
 
 
 # References 
